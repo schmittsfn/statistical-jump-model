@@ -52,6 +52,50 @@ State labels follow author cumulative-return sorting, including unreachable
 empty states. Original Bloomberg/GFD datasets and experiment configuration are
 not included. The author library is a dependency, not vendored or relicensed.
 
+## Example research results
+
+The graphics below summarize a separate convention-sensitivity study completed
+on 15 November 2026. They are **historical development results**, not the paper's
+results, an untouched holdout test, or a backtest reproduced by this standalone
+package. The study's baseline warnings matched its earlier archived baseline.
+Alternative-convention execution and the entry evaluator live in the separate
+research harness; this repository's API has not been expanded by these figures.
+
+![Statistical jump model: percentage of common dates with changed warnings](docs/results/sensitivity.png)
+
+Changing one convention at a time can change a warning without establishing
+which convention is correct. Percentages use each alternative's common valid
+dates; counts and dates are in [the plotted data](docs/results/summary.json).
+The dashed 5% line is a predeclared descriptive marker, not a significance test.
+
+![Statistical jump model: baseline entry outcomes versus same-calendar controls](docs/results/outcomes.png)
+
+Each instrument uses its own period shown in the graphic. Compare policies
+within an instrument, not returns across instruments or repositories. Lower
+drawdown can reflect spending more time in cash. The model baseline underperformed
+the trend control's annualized return on the NVIDIA calendar.
+
+SMH is unavailable: its history is too short for 3,000 training sessions followed by eight years of selection. February/August refits have 1,940 common NVIDIA dates instead of 1,959.
+
+**Entry experiment:** three funded sleeves; opportunities every 21 sessions;
+next-open execution; fixed 60-session exit; at most 20 sessions waiting; 10 basis
+points per side; historical Treasury cash proxy. “Immediate” uses that same
+schedule and is **not buy and hold**. “Trend” uses the combined 50/200-day rule.
+No taxes or investor-specific costs. Previously inspected, retrospectively
+reconstructed history; no complete point-in-time vintages. No forecast or
+trading-validity claim follows.
+
+Figures contain aggregate research outputs only, not market-data captures or
+personal portfolio information. Re-render these exact summary graphics with:
+
+```sh
+uv run --with matplotlib python examples/render_results.py
+```
+
+This renders [summary.json](docs/results/summary.json); it does not rerun or
+independently reproduce the underlying historical study. The JSON records the
+frozen protocol hash and comparison identity for provenance.
+
 ## Replication and contributions
 
 See [open questions](docs/REPLICATION_QUESTIONS.md),

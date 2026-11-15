@@ -1,0 +1,155 @@
+{
+  "title": "Statistical jump model",
+  "as_of": "2026-11-13",
+  "study": "Historical development study; not untouched holdout or original-paper replication",
+  "protocol_sha256": "7ed4365b84fde521d11f7779f8ca8e542a03ce4406a3a4cbc5293676a1a43833",
+  "comparison_id": "d35e1568914646d5a702d9e2cf654c65",
+  "source": "Aggregate outputs from a separate sensitivity harness using archived market inputs; this repository does not include that harness or raw inputs.",
+  "variants": [
+    {
+      "name": "Downside: no square root",
+      "id": "printed_no_sqrt",
+      "instruments": {
+        "NVDA": {
+          "common_observations": 1959,
+          "warning_disagreements": 352,
+          "warning_disagreement_fraction": 0.17968351199591628,
+          "first": "2019-01-31",
+          "last": "2026-11-13"
+        },
+        "SMH": {
+          "common_observations": 0,
+          "warning_disagreements": 0,
+          "warning_disagreement_fraction": null,
+          "first": null,
+          "last": null
+        }
+      }
+    },
+    {
+      "name": "Recursive EWM",
+      "id": "recursive_ewm",
+      "instruments": {
+        "NVDA": {
+          "common_observations": 1959,
+          "warning_disagreements": 0,
+          "warning_disagreement_fraction": 0.0,
+          "first": "2019-01-31",
+          "last": "2026-11-13"
+        },
+        "SMH": {
+          "common_observations": 0,
+          "warning_disagreements": 0,
+          "warning_disagreement_fraction": null,
+          "first": null,
+          "last": null
+        }
+      }
+    },
+    {
+      "name": "Sample normalization",
+      "id": "sample_normalization",
+      "instruments": {
+        "NVDA": {
+          "common_observations": 1959,
+          "warning_disagreements": 0,
+          "warning_disagreement_fraction": 0.0,
+          "first": "2019-01-31",
+          "last": "2026-11-13"
+        },
+        "SMH": {
+          "common_observations": 0,
+          "warning_disagreements": 0,
+          "warning_disagreement_fraction": null,
+          "first": null,
+          "last": null
+        }
+      }
+    },
+    {
+      "name": "Denser penalty grid",
+      "id": "dense_grid",
+      "instruments": {
+        "NVDA": {
+          "common_observations": 1959,
+          "warning_disagreements": 148,
+          "warning_disagreement_fraction": 0.07554874936191934,
+          "first": "2019-01-31",
+          "last": "2026-11-13"
+        },
+        "SMH": {
+          "common_observations": 0,
+          "warning_disagreements": 0,
+          "warning_disagreement_fraction": null,
+          "first": null,
+          "last": null
+        }
+      }
+    },
+    {
+      "name": "February / August refits",
+      "id": "feb_aug_refit",
+      "instruments": {
+        "NVDA": {
+          "common_observations": 1940,
+          "warning_disagreements": 69,
+          "warning_disagreement_fraction": 0.03556701030927835,
+          "first": "2019-02-28",
+          "last": "2026-11-13"
+        },
+        "SMH": {
+          "common_observations": 0,
+          "warning_disagreements": 0,
+          "warning_disagreement_fraction": null,
+          "first": null,
+          "last": null
+        }
+      }
+    },
+    {
+      "name": "Alternative seed",
+      "id": "seed138",
+      "instruments": {
+        "NVDA": {
+          "common_observations": 1959,
+          "warning_disagreements": 121,
+          "warning_disagreement_fraction": 0.061766207248596224,
+          "first": "2019-01-31",
+          "last": "2026-11-13"
+        },
+        "SMH": {
+          "common_observations": 0,
+          "warning_disagreements": 0,
+          "warning_disagreement_fraction": null,
+          "first": null,
+          "last": null
+        }
+      }
+    }
+  ],
+  "baseline": {
+    "NVDA": {
+      "first": "2019-01-31",
+      "last": "2026-11-13",
+      "readings": 1959,
+      "policies": {
+        "tuned": {
+          "annualized_return": 0.3277160208425982,
+          "max_drawdown": -0.44087331874391056,
+          "mean_exposure": 0.5693394913646299
+        },
+        "trend": {
+          "annualized_return": 0.4561468888159945,
+          "max_drawdown": -0.31641156027001127,
+          "mean_exposure": 0.5765441086403476
+        },
+        "immediate": {
+          "annualized_return": 0.6276401620552998,
+          "max_drawdown": -0.6551852600300048,
+          "mean_exposure": 0.913025689912421
+        }
+      },
+      "entry_first": "2019-01-31"
+    }
+  }
+}
