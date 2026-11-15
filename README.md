@@ -2,6 +2,8 @@
 
 *Has the market shifted into a less favourable pattern?*
 
+*Could a change in market conditions mean taking more risk for less reward?*
+
 Standalone Python research implementation with independent numerical fixtures
 and explicit replication questions for the paper authors.
 
