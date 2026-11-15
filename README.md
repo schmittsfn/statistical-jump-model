@@ -1,5 +1,7 @@
 # Statistical jump model
 
+*Has the market shifted into a less favourable pattern?*
+
 Standalone Python research implementation with independent numerical fixtures
 and explicit replication questions for the paper authors.
 
