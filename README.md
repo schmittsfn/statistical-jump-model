@@ -65,12 +65,16 @@ research harness; this repository's API has not been expanded by these figures.
 
 ![Statistical jump model: percentage of common dates with changed warnings](docs/results/sensitivity.png)
 
+*The warnings depend noticeably on the settings: some choices change the buy-or-wait decision on nearly one day in five. A single version should therefore not be treated as a definitive answer.*
+
 Changing one convention at a time can change a warning without establishing
 which convention is correct. Percentages use each alternative's common valid
 dates; counts and dates are in [the plotted data](docs/results/summary.json).
 The dashed 5% line is a predeclared descriptive marker, not a significance test.
 
 ![Statistical jump model: baseline entry outcomes versus same-calendar controls](docs/results/outcomes.png)
+
+*The simple trend rule earned more and suffered a smaller worst decline than the model, while keeping a similar amount invested. In this test, the model did not improve the trade-off between return and risk.*
 
 Each instrument uses its own period shown in the graphic. Compare policies
 within an instrument, not returns across instruments or repositories. Lower
