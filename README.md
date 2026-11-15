@@ -4,6 +4,8 @@
 
 *Could a change in market conditions mean taking more risk for less reward?*
 
+![Conceptual illustration: a favourable market pattern shifts to a more volatile, less favourable pattern.](docs/hero/concept.png)
+
 Standalone Python research implementation with independent numerical fixtures
 and explicit replication questions for the paper authors.
 
@@ -120,3 +122,16 @@ been reproduced here.
 Code, tests and documentation were prepared with OpenAI Codex assistance.
 MIT license covers this project's files; dependencies and papers retain their
 respective licenses and rights. No independent academic audit is claimed.
+
+## Rebuild the introductory illustration
+
+The introductory graphic is drawn locally with SwiftUI and exported with
+`ImageRenderer`. It is schematic, not observed market data. No image service,
+API key or paid generation is used. On macOS with Xcode command-line tools:
+
+```sh
+swiftc -parse-as-library examples/hero/HeroView.swift examples/hero/Export.swift -o /tmp/render-risk-hero
+/tmp/render-risk-hero docs/hero/concept.png
+```
+
+The export is a 2400 × 940 PNG. Source: [HeroView.swift](examples/hero/HeroView.swift).
